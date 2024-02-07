@@ -1,0 +1,47 @@
+# Basic Networking Concepts
+
+## Introduction
+A computer network is a set of interconnected devices that communicate with each other to share resources and data. These networks can vary in size and complexity, from simple home networks to large enterprise networks and global networks like the Internet.
+
+## Types of Networks
+There are several types of networks, among the most common are:
+
+- **LAN (Local Area Network)**: A network that is typically confined within a limited geographical area, such as a home, office, or building.
+
+- **WAN (Wide Area Network)**: A network that spans a wider geographical area, such as a city, country, or even worldwide.
+
+- **MAN (Metropolitan Area Network)**: A network that covers a metropolitan area, generally larger than a LAN but smaller than a WAN.
+
+- **Wireless**: Networks that utilize wireless technologies, such as Wi-Fi or Bluetooth, to connect devices without the need for physical cables.
+
+## Network Protocols
+Protocols are sets of rules and standards that enable effective communication between devices in a network. Some common protocols include:
+
+- **TCP/IP (Transmission Control Protocol/Internet Protocol)**: Used for communication on the Internet and many other networks.
+
+- **HTTP/HTTPS (Hypertext Transfer Protocol/Secure Hypertext Transfer Protocol)**: Used for data transfer on the web.
+
+- **DNS (Domain Name System)**: Protocol used to translate domain names into IP addresses.
+
+## Network Devices
+Network devices are physical or virtual components used to interconnect devices in a network. Some common devices include:
+
+- **Router**: Device that directs network traffic between different networks.
+
+- **Switch**: Device that connects multiple devices in a local network and allows communication between them.
+
+- **Gateway**: Entry or exit point to a network, which may act as a bridge between different types of networks.
+
+- **Firewall**: Device used to protect a network by filtering unauthorized traffic.
+
+## Network Security
+Network security is crucial to protect the integrity and confidentiality of data transmitted over a network. Some common security measures include:
+
+- **Firewalls**: As mentioned earlier, firewalls are used to filter unauthorized traffic and protect the network from potential threats.
+
+- **VPN (Virtual Private Network)**: Allows users to securely access a network over the Internet by creating an encrypted tunnel.
+
+- **Encryption**: Data encryption is used to protect sensitive information while it is transmitted over a network, preventing it from being intercepted or modified by unauthorized individuals.
+
+## Conclusion
+These are just some of the basic networking concepts that can help you understand how computer networks work and how they can be effectively configured and secured. As you delve further into this field, you will discover a wide range of technologies and concepts that contribute to the operation of modern networks.
