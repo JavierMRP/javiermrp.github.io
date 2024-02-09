@@ -1,8 +1,8 @@
 ---
-title: Server-side vulnerabilities
-date: 2024-02-07 20:00 
+title: Authentication Attacks
+date: 2024-02-08 20:00 
 categories: [Path Traversal]
-tags: [Local File Inclusion (LFI), Vertical Escalation, Horizontal Escalation]
+tags: [Brute-force attacks, 2FA]
 author: jamarapo
 ---
 
