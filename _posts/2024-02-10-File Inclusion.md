@@ -2,7 +2,7 @@
 title: File Inclusion
 date: 2024-02-10 20:00 
 categories: [Path Traversal]
-tags: [Local File Inclusion (LFI), Fuzz, Ffuf, Php Wrappers, php, URL]
+tags: [Local File Inclusion (LFI), Fuzz, Ffuf, Php Wrappers, php]
 author: jamarapo
 ---
 
