@@ -17,17 +17,17 @@ A good practice to avoid brute-force attacks is to make HTTP responses return th
 To solve the lab, enumerate a valid username, brute-force this user's password, then access their account page. 
 
 
-![alt text](../assets/img/posts/image_1.png)
+![alt text](/assets/img/posts/image_1.png)
 
-![alt text](../assets/img/posts/image_2.png)
+![alt text](/assets/img/posts/image_2.png)
 
-![alt text](../assets/img/posts/image_3.png)
-
-
-![alt text](../assets/img/posts/image_6.png)
+![alt text](/assets/img/posts/image_3.png)
 
 
-![alt text](../assets/img/posts/image_5.png)
+![alt text](/assets/img/posts/image_6.png)
+
+
+![alt text](/assets/img/posts/image_5.png)
 
 ## Bypassing two-factor authentication
 Sometimes 2FA can be bypassing if the code verification page is separtly of the login page, and the attacker before enter the password skip these code verification page.
@@ -38,6 +38,6 @@ Sometimes 2FA can be bypassing if the code verification page is separtly of the 
     Your credentials: wiener:peter
     Victim's credentials carlos:montoya
 
-![alt text](../assets/img/posts/image_7.png)
+![alt text](/assets/img/posts/image_7.png)
 
 Enter with Carlos credentials and doing path traversal using /my-account URL allows enter to user account without 2FA.

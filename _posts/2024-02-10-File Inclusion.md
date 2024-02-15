@@ -18,9 +18,9 @@ https://docs.fluidattacks.com/criteria/vulnerabilities/123/
 LFI is a secondary-order-attack beacause we can pull a file with a value that we control indirectly for example change username with etc/passwd avatar and then exploit with other vulnerability.
 
 ## Lab 1
-![alt text](../assets/img/posts/File%20Inclusion/image.png)
+![alt text](/assets/img/posts/File%20Inclusion/image.png)
 
-![alt text](../assets/img/posts/File%20Inclusion/image-1.png)
+![alt text](/assets/img/posts/File%20Inclusion/image-1.png)
 
 ## Encoder
 Web applications use URL encoders to prevent LFI. In spite of some versions were vulnerable to this type of attack, we may find strategies to pass directory paths. 
@@ -33,11 +33,11 @@ For this lab have been used Ffuf for fuzzing the etc/passwd directory. With the 
 Using the parent directory languages/*
 allows LFI.
 
-![alt text](../assets/img/posts/File%20Inclusion/3.png)
+![alt text](/assets/img/posts/File%20Inclusion/3.png)
 
-![alt text](../assets/img/posts/File%20Inclusion/1.png)
+![alt text](/assets/img/posts/File%20Inclusion/1.png)
 
-![alt text](../assets/img/posts/File%20Inclusion/2.png)
+![alt text](/assets/img/posts/File%20Inclusion/2.png)
 
 
 The flag.txt was finded in the same directory.
@@ -65,10 +65,10 @@ convert.base64-encode.
 
 In this file firt we fuzzed the webpage finding .php files that exists and return 200 but not showed nothing in the body. Then we encode the using PHP wrapper "language=php://filter/read=convert.base64-encode/resource=" for grab the file in format base64 in the reponse body.
 
-![alt text](../assets/img/posts/File%20Inclusion/4.png)
+![alt text](/assets/img/posts/File%20Inclusion/4.png)
 
-![alt text](../assets/img/posts/File%20Inclusion/5.png)
+![alt text](/assets/img/posts/File%20Inclusion/5.png)
 
-![alt text](../assets/img/posts/File%20Inclusion/6.png)
+![alt text](/assets/img/posts/File%20Inclusion/6.png)
 
-![alt text](../assets/img/posts/File%20Inclusion/7.png)
+![alt text](/assets/img/posts/File%20Inclusion/7.png)
