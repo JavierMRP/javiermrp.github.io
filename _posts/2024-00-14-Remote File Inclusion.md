@@ -1,6 +1,6 @@
 ---
 title: Remote File Inclusion (RFI)
-date: 2024-02-14 20:00 
+date: 2024-02-12 20:00 
 categories: [File Inclusion]
 tags: [SMB, RFI, RCE, PHP, FTP, Reverse Shell]
 author: jamarapo
