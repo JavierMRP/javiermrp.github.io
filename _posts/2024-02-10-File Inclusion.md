@@ -72,3 +72,4 @@ In this file firt we fuzzed the webpage finding .php files that exists and retur
 ![alt text](/assets/img/posts/File%20Inclusion/6.png)
 
 ![alt text](/assets/img/posts/File%20Inclusion/7.png)
+
