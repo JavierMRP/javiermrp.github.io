@@ -268,3 +268,24 @@ Utilizing WAFs like ModSecurity helps fortify applications, but care must be tak
 ### Conclusion
 
 Hardening systems enhances defense against attacks but does not guarantee invulnerability. Regular testing and vigilance are necessary to maintain security posture effectively. The goal is to create a stronger defense to detect and mitigate attacks promptly.
+
+![alt text](/assets/img/posts/RFI/image-18.png)
+```
+find / -type f -name "*.ini"
+```
+![alt text](/assets/img/posts/RFI/image-24.png)
+
+
+
+![alt text](/assets/img/posts/RFI/image-19.png)
+
+
+## Skills Assesment
+
+![alt text](/assets/img/posts/RFI/image-20.png)
+
+![alt text](/assets/img/posts/RFI/image-21.png)
+
+![alt text](/assets/img/posts/RFI/image-22.png)
+
+![alt text](/assets/img/posts/RFI/image-23.png)
