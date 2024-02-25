@@ -184,3 +184,87 @@ Log poisoning extends beyond Apache and Nginx logs, potentially impacting other 
 ![alt text](/assets/img/posts/RFI/image-9.png)
 
 ![alt text](/assets/img/posts/RFI/image-10.png)
+
+
+## Automated Scanning
+
+Understanding file inclusion attacks and crafting advanced payloads for remote code execution is crucial. Custom payloads matching specific configurations are often necessary for successful exploitation, especially when facing security measures like WAFs or firewalls.
+
+In many cases, automated methods can swiftly identify and exploit trivial LFI vulnerabilities. Fuzzing tools and specialized LFI scanners offer efficient means to test for such vulnerabilities without manual intervention.
+Fuzzing Parameters
+
+Exposed parameters, not linked to HTML forms, can pose security risks. Fuzzing for these parameters is essential, as they are often less secure than public ones. Tools like ffuf enable fuzzing for GET/POST parameters to uncover potential vulnerabilities.
+Example:
+
+```
+bash
+
+ffuf -w /opt/useful/SecLists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?FUZZ=value' -fs 2287
+```
+### LFI Wordlists
+
+While manual crafting of LFI payloads is reliable, quick tests using common LFI payloads can save time. LFI wordlists like LFI-Jhaddix.txt offer a range of bypasses and common files for efficient testing.
+Example:
+```
+bash
+
+ffuf -w /opt/useful/SecLists/Fuzzing/LFI/LFI-Jhaddix.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?language=FUZZ' -fs 2287
+```
+### Fuzzing Server Files
+
+Apart from fuzzing LFI payloads, identifying crucial server files like the webroot path and server configurations is vital for successful exploitation.
+Example:
+```
+bash
+
+ffuf -w /opt/useful/SecLists/Discovery/Web-Content/default-web-root-directory-linux.txt:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?language=../../../../FUZZ/index.php' -fs 2287
+```
+### Server Logs/Configurations
+
+Exploring server logs and configurations helps identify important information like webroot paths and log file locations. Manual inspection, aided by wordlists, assists in uncovering critical details for exploitation.
+Example:
+```
+bash
+
+ffuf -w ./LFI-WordList-Linux:FUZZ -u 'http://<SERVER_IP>:<PORT>/index.php?language=../../../../FUZZ' -fs 2287
+```
+### LFI Tools
+
+While LFI tools like LFISuite, LFiFreak, and liffy can automate parts of the process, manual testing remains crucial for comprehensive vulnerability assessment. However, most tools are outdated and may not provide long-term solutions.
+
+Note: Manual verification of identified vulnerabilities is recommended for thorough assessment and exploitation.
+
+
+![alt text](image-11.png)
+
+![alt text](image-12.png)
+
+![alt text](image-13.png)
+
+![alt text](image-14.png)
+
+![alt text](image-15.png)
+
+![alt text](image-16.png)
+
+![alt text](image-17.png)
+
+## File Inclusion Prevention:
+
+This module discusses detecting and exploiting file inclusion vulnerabilities, emphasizing the importance of patching and hardening systems. Avoiding user-controlled inputs in file inclusion functions is key to reducing vulnerabilities. Whitelisting allowed inputs and matching them to files can help mitigate risks.
+
+### Preventing Directory Traversal
+
+Control over directories must be restricted to prevent attackers from escaping web applications. Using language or framework tools like PHP's basename() function helps extract filenames securely. Custom functions should address edge cases, and input sanitization can prevent directory traversal attempts.
+
+### Web Server Configuration
+
+Configurations like disabling remote file inclusion and restricting web applications to their directories reduce vulnerability impact. PHP's open_basedir directive limits file access. Disabling risky modules like PHP Expect mod_userdir is advisable.
+
+### Web Application Firewall (WAF)
+
+Utilizing WAFs like ModSecurity helps fortify applications, but care must be taken to avoid false positives. Continuous monitoring and testing are essential to detect and mitigate attacks promptly.
+
+### Conclusion
+
+Hardening systems enhances defense against attacks but does not guarantee invulnerability. Regular testing and vigilance are necessary to maintain security posture effectively. The goal is to create a stronger defense to detect and mitigate attacks promptly.
