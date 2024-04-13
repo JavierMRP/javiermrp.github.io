@@ -1,6 +1,6 @@
 ---
 title: Server-Side Request Forgery
-date: 2024-02-18 20:00 
+date: 2024-03-01 20:00 
 categories: [Path Traversal]
 tags: [HTTP, POST, Server]
 author: jamarapo
